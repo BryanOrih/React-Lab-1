@@ -1,3 +1,7 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
   width: 100vw;
@@ -46,5 +50,23 @@ form > *{
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+ul{
+  list-style-type: none;
+  border: 1px solid black;
+  display: table;
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
+}
+li {
+  margin: 2px 3px;
+}
+form > input[type=submit]{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+div > input{
+  margin-top: 30px;
 }
 

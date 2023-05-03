@@ -1,37 +1,20 @@
 import React, {useState} from 'react';
 import './App.css';
 import HelloWorld from './components/helloWorld';
-import Labels from './components/labels';
-
-let colorArray = [
-  "blue",
-  "red",
-  "black",
-  "green",
-  "orange",
-  "white"
-]
+import ContactForm from './components/contactForm';
+import Buttons from './components/Buttons';
+import TextInput from './components/TextInput';
+import ItemList from './components/ItemList';
 
 function App() {
 
-
-  let [backGroundColor, setBackgroundColor] = useState('blue')
-  const ColorChanger = () =>{
-    let randomNum = Math.floor(Math.random()* colorArray.length)
-    setBackgroundColor(colorArray[randomNum])
-  }
-
   return (
-    <div className="App" style ={{ backgroundColor: backGroundColor }}>
+    <div className="App">
       <HelloWorld />
-      <button onClick={ColorChanger}>change Background Color</button>
-      <form>
-        <Labels/>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input type='submit'></input>
-      </form>
+      <Buttons />
+      <ContactForm/>
+      <TextInput/>
+      <ItemList/>
     </div>
   );
 }
